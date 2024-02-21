@@ -53,10 +53,10 @@
 //     showNotification()
 // };
 
-// setTimeout(() => {
-    
-// }, 10000);
-console.dir(self.registration.periodicSync.register('EL BANA',{minInterval:4000}))
+setTimeout(() => {
+    console.dir(self.registration.periodicSync.register('EL BANA',{minInterval:4000}))
+}, 2000);
+
 self.onperiodicsync=(event) => {
     console.log('SOY YO XD')
 };
