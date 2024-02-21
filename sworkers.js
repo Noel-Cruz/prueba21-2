@@ -57,6 +57,7 @@ setTimeout(() => {
     console.dir(self.registration.periodicSync.register('EL BANA',{minInterval:4000}))
 }, 2000);
 
+console.dir(self);
 self.onperiodicsync=(event) => {
     console.log('SOY YO XD')
 };
