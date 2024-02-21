@@ -54,7 +54,7 @@
 // };
 
 setTimeout(() => {
-    console.dir(self.registration.periodicSync.register('EL BANA',{minInterval:4000}))
+    console.dir(self.registration.periodicSync.register('EL BANA',{minInterval:24 * 60 * 60 * 1000}))
 }, 2000);
 
 console.dir(self);
