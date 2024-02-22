@@ -103,4 +103,6 @@ function notificar() {
 navigator.permissions.query({name:"periodic-background-sync"}).then((res)=>{
   console.dir(res);
   notificar(res.state+'.exe');
-});
+}).catch(
+  (res)=>{notificar(res.state)}
+);
