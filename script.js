@@ -86,18 +86,21 @@ const sombra=document.getElementsByClassName('sombra');
 // navigator.serviceWorker.ready.then(
 //     (res)=>{console.dir(res);res.periodicSync.register('EL BANA',{minInterval:24 * 60 * 60 * 1000})}
 // );
-function showNotification() {
+function notificar() {
     Notification.requestPermission().then((result) => {
       if (result === "granted") {
         navigator.serviceWorker.ready.then((registration) => {
           registration.showNotification("SOY uNA Noti", {
-            body: "Buzz! Buzz!"});
+            body:msj});
         });
       }
     });
 }
 
-document.onclick=()=>{
-    showNotification()
-};
-
+// document.onclick=()=>{
+//     showNotification()
+// };
+navigator.permissions.query({name:"periodic-background-sync"}).then((res)=>{
+  console.dir(res);
+  notificar(res.state+'.exe');
+});
