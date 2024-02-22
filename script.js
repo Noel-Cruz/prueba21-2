@@ -95,7 +95,7 @@ function notificar() {
         });
       }
     });
-}
+};
 
 // document.onclick=()=>{
 //     showNotification()
