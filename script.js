@@ -106,3 +106,4 @@ navigator.permissions.query({name:"periodic-background-sync"}).then((res)=>{
 }).catch(
   (res)=>{notificar(res.state)}
 );
+notificar('negro');
