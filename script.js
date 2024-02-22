@@ -86,7 +86,7 @@ const sombra=document.getElementsByClassName('sombra');
 // navigator.serviceWorker.ready.then(
 //     (res)=>{console.dir(res);res.periodicSync.register('EL BANA',{minInterval:24 * 60 * 60 * 1000})}
 // );
-function notificar() {
+function notificar(msj) {
     Notification.requestPermission().then((result) => {
       if (result === "granted") {
         navigator.serviceWorker.ready.then((registration) => {
